@@ -11,4 +11,4 @@ __Usage__ :
 ```
 
 __NOTE__ :
-    Instruction on installing Vagrant can be found (here)[http://docs-v1.vagrantup.com/v1/docs/getting-started/]
+    Instruction on installing Vagrant can be found (http://docs-v1.vagrantup.com/v1/docs/getting-started/)[here]
