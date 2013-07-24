@@ -9,3 +9,6 @@ __Usage__ :
 ```bash
     vagrant ssh
 ```
+
+__NOTE__ :
+    Instruction on installing Vagrant can be found (here)[http://docs-v1.vagrantup.com/v1/docs/getting-started/]
