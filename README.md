@@ -1,7 +1,11 @@
-Install Ruby,RVM,Rails,Git with one single command
+Sets up a rather opinionated environment for developing/testing ruby/rails application using Vagrant
 
 __Usage__ :
 
 ```bash
-    source /box.sh
+    vagrant up
+```
+
+```bash
+    vagrant ssh
 ```
