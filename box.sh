@@ -30,4 +30,10 @@ echo ". ~/.rvm/scripts/rvm" >> ~/.bashrc
 if [-f ~/.zshrc]; then
 	echo ". ~/.rvm/scripts/rvm" >> ~/.zshrc
 fi
+echo "Installing nodejs"
+git clone https://github.com/joyent/node.git
+cd node
+git checkout v0.6.18 #Try checking nodejs.org for what the stable version is
+./configure && make && sudo make install 
+echo "Thanks for using the box installer"
 
