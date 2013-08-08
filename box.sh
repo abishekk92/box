@@ -11,7 +11,13 @@ case $DIST in
 	sudo apt-get -y update
 	echo "Downloading dependencies"
 	sudo apt-get -y install build-essential openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison subversion
-		;;
+
+echo "Installing nodejs"
+git clone https://github.com/joyent/node.git
+cd node
+git checkout v0.6.18 #Try checking nodejs.org for what the stable version is
+./configure && make && sudo make install 
+;;
 
 	'REDHAT')
 		#installation for red-hat based distros
@@ -19,6 +25,7 @@ case $DIST in
 	sudo yum -y update
 	sudo yum -y install gcc gcc-c++ kernel-devel openssl libreadline6 libreadline6-dev curl git-core gmake libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison-devel subversion
 	sudo yum -y install  sqlite sqlite-devel 
+	sudo yum -y install npm
 		;;
 esac
 echo "Downloading rvm"
@@ -30,10 +37,5 @@ echo ". ~/.rvm/scripts/rvm" >> ~/.bashrc
 if [-f ~/.zshrc]; then
 	echo ". ~/.rvm/scripts/rvm" >> ~/.zshrc
 fi
-echo "Installing nodejs"
-git clone https://github.com/joyent/node.git
-cd node
-git checkout v0.6.18 #Try checking nodejs.org for what the stable version is
-./configure && make && sudo make install 
 echo "Thanks for using the box installer"
 
